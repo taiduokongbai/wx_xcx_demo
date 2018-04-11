@@ -1,0 +1,25 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <view class="nav">
+    <view class="{{curTab == 1?'red':'default'}}" bindtap="selected" data-key='1'>全部</view>
+    <view class="{{curTab == 2?'red':'default'}}" bindtap="selected" data-key='2'>区域小程序</view>
+    <view class="{{curTab == 3?'red':'default'}}" bindtap="selected" data-key='3'>行业小程序</view>
+  </view>
+  <view class="content-body">
+    <view class="{{curTab == 1?'show':'hidden'}}">
+      <view wx:for="{{img_all}}" wx:for-item="item" wx:key="id"  class="img_all">
+        <image src="{{item.url}}"/>
+      </view>
+    </view>
+    <view class="{{curTab == 2?'show':'hidden'}}">
+      <view wx:for="{{img_md}}" wx:for-item="item" wx:key="id"  class="img_all">
+        <image src="{{item.url}}"/>
+      </view>
+    </view>
+    <view class="{{curTab == 3?'show':'hidden'}}">
+      <view wx:for="{{img_ws}}" wx:for-item="item" wx:key="id"  class="img_all">
+        <image src="{{item.url}}"/>
+      </view>
+    </view>
+  </view>
+</view>
